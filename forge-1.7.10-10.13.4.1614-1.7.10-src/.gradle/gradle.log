@@ -10,11 +10,32 @@ See https://gist.github.com/TheCurle/fe7ad3ede188cbdd15c235cc75d52d4a for more i
          by: Searge, ProfMobius, Fesh0r,         
          R4wk, ZeuX, IngisKahn, bspkrs           
 #################################################
+Found AccessTransformer in main resources: a_at.cfg
+:downloadClient SKIPPED
+:downloadServer SKIPPED
+:getVersionJson
+:extractUserDev UP-TO-DATE
+:mergeJars SKIPPED
+:applyBinPatches
+:downloadMcpTools SKIPPED
+:extractMcpData UP-TO-DATE
+:genSrgs SKIPPED
+:deobfBinJar
+Applying SpecialSource...
+Applying Exceptor...
+Stripping synthetics...
 :compileApiJava UP-TO-DATE
 :processApiResources UP-TO-DATE
 :apiClasses UP-TO-DATE
-:sourceMainJava UP-TO-DATE
-:compileJava UP-TO-DATE
+:sourceMainJava
+:compileJavawarning: [options] bootstrap class path not set in conjunction with -source 1.6
+C:\Users\ealih\git\mcmodjava\forge-1.7.10-10.13.4.1614-1.7.10-src\build\sources\java\com\scripterae03\diplomka\ObsidianForgedHoe.java:24: error: unmappable character for encoding Cp1251
+		info.add("§bЗАЧЕМ НАДО БЫЛО ЕГО КРАФТ�?ТЬ????");
+		                                                            ^
+Note: Some input files use unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+1 warning
+
 :processResources
 :classes
 :jar
@@ -22,10 +43,6 @@ See https://gist.github.com/TheCurle/fe7ad3ede188cbdd15c235cc75d52d4a for more i
 :processTestResources UP-TO-DATE
 :testClasses UP-TO-DATE
 :test UP-TO-DATE
-:extractMcpData UP-TO-DATE
-:getVersionJson
-:extractUserDev UP-TO-DATE
-:genSrgs SKIPPED
 :reobf
 :assemble
 :check UP-TO-DATE
@@ -33,4 +50,4 @@ See https://gist.github.com/TheCurle/fe7ad3ede188cbdd15c235cc75d52d4a for more i
 
 BUILD SUCCESSFUL
 
-Total time: 6.856 secs
+Total time: 34.874 secs

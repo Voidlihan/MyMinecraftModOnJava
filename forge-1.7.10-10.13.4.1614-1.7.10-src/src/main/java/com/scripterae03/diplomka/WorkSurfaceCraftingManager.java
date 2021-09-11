@@ -43,7 +43,6 @@ public class WorkSurfaceCraftingManager
         this.addRecipe(new ItemStack(BaseDiplomka.spearblade, 1), new Object[] {"S    ", " S   ", "  S  ", "   S ", "    S", 'S', BaseDiplomka.crystallizedobsidian});
         this.addRecipe(new ItemStack(BaseDiplomka.handle_for_spear, 1), new Object[] {"  S  ", "  S  ", "  S  ", "  S  ", "  S  ", 'S', BaseDiplomka.forged_handle});
         this.addRecipe(new ItemStack(BaseDiplomka.spearofwaterandlava, 1), new Object[] {"QQ   ", "QQQ  ", " QS  ", "   S ", "    S", 'S', BaseDiplomka.handle_for_spear, 'Q', BaseDiplomka.spearblade});
-        
         Collections.sort(this.recipes, new WorkSurfaceRecipeSorter(this));
     }
 

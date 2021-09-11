@@ -1,87 +1,37 @@
-[16:28:20] [main/INFO]: Setting user: Player369
-[16:28:22] [Client thread/INFO]: LWJGL Version: 2.9.1
-[16:28:52] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Example Mod, FMLFileResourcePack:Diplomka
-[16:28:53] [Sound Library Loader/INFO]: Sound engine started
-[16:28:56] [Client thread/INFO]: Created: 16x16 textures/blocks-atlas
-[16:28:56] [Client thread/INFO]: Created: 16x16 textures/items-atlas
-[16:28:56] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Example Mod, FMLFileResourcePack:Diplomka
-[16:28:57] [Client thread/INFO]: Created: 512x256 textures/blocks-atlas
-[16:28:58] [Client thread/INFO]: Created: 256x256 textures/items-atlas
-[16:28:59] [Sound Library Loader/INFO]: Sound engine started
-[16:29:04] [Server thread/INFO]: Starting integrated minecraft server version 1.7.10
-[16:29:04] [Server thread/INFO]: Generating keypair
-[16:29:04] [Server thread/INFO]: Preparing start region for level 0
-[16:29:05] [Server thread/INFO]: Changing view distance to 9, from 10
-[16:29:06] [Server thread/INFO]: Player369[local:E:9861ca66] logged in with entity id 891 at (-547.8341664877407, 7.152760086049953, -29.959095709379255)
-[16:29:06] [Server thread/INFO]: Player369 joined the game
-[16:30:36] [Server thread/INFO]: Player369 has just earned the achievement [Taking Inventory]
-[16:30:36] [Client thread/INFO]: [CHAT] Player369 has just earned the achievement [Taking Inventory]
-[16:38:00] [Server thread/INFO]: Saving and pausing game...
-[16:38:00] [Server thread/INFO]: Saving chunks for level 'New Worlddas'/Overworld
-[16:38:00] [Server thread/INFO]: Saving chunks for level 'New Worlddas'/Nether
-[16:38:00] [Server thread/INFO]: Saving chunks for level 'New Worlddas'/The End
-[16:38:08] [Server thread/INFO]: Saving and pausing game...
-[16:38:08] [Server thread/INFO]: Saving chunks for level 'New Worlddas'/Overworld
-[16:38:08] [Server thread/INFO]: Saving chunks for level 'New Worlddas'/Nether
-[16:38:08] [Server thread/INFO]: Saving chunks for level 'New Worlddas'/The End
-[16:38:15] [Server thread/INFO]: Saving and pausing game...
-[16:38:15] [Server thread/INFO]: Saving chunks for level 'New Worlddas'/Overworld
-[16:38:15] [Server thread/INFO]: Saving chunks for level 'New Worlddas'/Nether
-[16:38:15] [Server thread/INFO]: Saving chunks for level 'New Worlddas'/The End
-[16:38:27] [Server thread/INFO]: Saving and pausing game...
-[16:38:27] [Server thread/INFO]: Saving chunks for level 'New Worlddas'/Overworld
-[16:38:27] [Server thread/INFO]: Saving chunks for level 'New Worlddas'/Nether
-[16:38:27] [Server thread/INFO]: Saving chunks for level 'New Worlddas'/The End
-[16:38:48] [Server thread/INFO]: Saving and pausing game...
-[16:38:48] [Server thread/INFO]: Saving chunks for level 'New Worlddas'/Overworld
-[16:38:48] [Server thread/INFO]: Saving chunks for level 'New Worlddas'/Nether
-[16:38:48] [Server thread/INFO]: Saving chunks for level 'New Worlddas'/The End
-[16:40:24] [Server thread/INFO]: Saving and pausing game...
-[16:40:24] [Server thread/INFO]: Saving chunks for level 'New Worlddas'/Overworld
-[16:40:24] [Server thread/INFO]: Saving chunks for level 'New Worlddas'/Nether
-[16:40:24] [Server thread/INFO]: Saving chunks for level 'New Worlddas'/The End
-[16:43:45] [Server thread/INFO]: Saving and pausing game...
-[16:43:45] [Server thread/INFO]: Saving chunks for level 'New Worlddas'/Overworld
-[16:43:45] [Server thread/INFO]: Saving chunks for level 'New Worlddas'/Nether
-[16:43:45] [Server thread/INFO]: Saving chunks for level 'New Worlddas'/The End
-[16:54:29] [Server thread/INFO]: Saving and pausing game...
-[16:54:29] [Server thread/INFO]: Saving chunks for level 'New Worlddas'/Overworld
-[16:54:29] [Server thread/INFO]: Saving chunks for level 'New Worlddas'/Nether
-[16:54:29] [Server thread/INFO]: Saving chunks for level 'New Worlddas'/The End
-[16:55:30] [Server thread/INFO]: Saving and pausing game...
-[16:55:30] [Server thread/INFO]: Saving chunks for level 'New Worlddas'/Overworld
-[16:55:30] [Server thread/INFO]: Saving chunks for level 'New Worlddas'/Nether
-[16:55:30] [Server thread/INFO]: Saving chunks for level 'New Worlddas'/The End
-[19:19:22] [Server thread/INFO]: Saving and pausing game...
-[19:19:22] [Server thread/INFO]: Saving chunks for level 'New Worlddas'/Overworld
-[19:19:22] [Server thread/INFO]: Saving chunks for level 'New Worlddas'/Nether
-[19:19:22] [Server thread/INFO]: Saving chunks for level 'New Worlddas'/The End
-[19:20:57] [Server thread/INFO]: Saving and pausing game...
-[19:20:57] [Server thread/INFO]: Saving chunks for level 'New Worlddas'/Overworld
-[19:20:57] [Server thread/INFO]: Saving chunks for level 'New Worlddas'/Nether
-[19:20:57] [Server thread/INFO]: Saving chunks for level 'New Worlddas'/The End
-[23:25:30] [Server thread/INFO]: Saving and pausing game...
-[23:25:30] [Server thread/INFO]: Saving chunks for level 'New Worlddas'/Overworld
-[23:25:30] [Server thread/INFO]: Saving chunks for level 'New Worlddas'/Nether
-[23:25:30] [Server thread/INFO]: Saving chunks for level 'New Worlddas'/The End
-[23:26:01] [Server thread/INFO]: <Player369> видидшь?
-[23:26:01] [Client thread/INFO]: [CHAT] <Player369> видидшь?
-[23:27:36] [Server thread/INFO]: <Player369> там была рукоять для копья
-[23:27:36] [Client thread/INFO]: [CHAT] <Player369> там была рукоять для копья
-[23:27:41] [Server thread/INFO]: <Player369> это обычная
-[23:27:42] [Client thread/INFO]: [CHAT] <Player369> это обычная
-[23:27:54] [Server thread/INFO]: <Player369> тут я переработал чтобы дорого не было
-[23:27:54] [Client thread/INFO]: [CHAT] <Player369> тут я переработал чтобы дорого не было
-[23:28:12] [Server thread/INFO]: <Player369> статы то хорошие
-[23:28:12] [Client thread/INFO]: [CHAT] <Player369> статы то хорошие
-[23:28:39] [Server thread/INFO]: Saving and pausing game...
-[23:28:39] [Server thread/INFO]: Saving chunks for level 'New Worlddas'/Overworld
-[23:28:39] [Server thread/INFO]: Saving chunks for level 'New Worlddas'/Nether
-[23:28:39] [Server thread/INFO]: Saving chunks for level 'New Worlddas'/The End
-[23:28:39] [Server thread/INFO]: Stopping server
-[23:28:39] [Server thread/INFO]: Saving players
-[23:28:39] [Server thread/INFO]: Saving worlds
-[23:28:39] [Server thread/INFO]: Saving chunks for level 'New Worlddas'/Overworld
-[23:28:39] [Server thread/INFO]: Saving chunks for level 'New Worlddas'/Nether
-[23:28:39] [Server thread/INFO]: Saving chunks for level 'New Worlddas'/The End
-[23:28:40] [Client thread/INFO]: Stopping!
+[03:55:19] [main/INFO]: Setting user: Player229
+[03:55:21] [Client thread/INFO]: LWJGL Version: 2.9.1
+[03:55:33] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:examplemod, FMLFileResourcePack:Diplomka
+[03:55:35] [Sound Library Loader/INFO]: Sound engine started
+[03:55:37] [Client thread/INFO]: Created: 16x16 textures/blocks-atlas
+[03:55:37] [Client thread/INFO]: Created: 16x16 textures/items-atlas
+[03:55:37] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:examplemod, FMLFileResourcePack:Diplomka
+[03:55:38] [Client thread/INFO]: Created: 512x256 textures/blocks-atlas
+[03:55:38] [Client thread/INFO]: Created: 256x256 textures/items-atlas
+[03:55:39] [Sound Library Loader/INFO]: Sound engine started
+[03:55:46] [Server thread/INFO]: Starting integrated minecraft server version 1.7.10
+[03:55:46] [Server thread/INFO]: Generating keypair
+[03:55:46] [Server thread/INFO]: Preparing start region for level 0
+[03:55:47] [Server thread/INFO]: Changing view distance to 9, from 10
+[03:55:48] [Server thread/INFO]: Player229[local:E:a8206b19] logged in with entity id 881 at (-589.012962230505, 4.0, -49.423457452346305)
+[03:55:48] [Server thread/INFO]: Player229 joined the game
+[03:56:02] [Server thread/INFO]: Player229 has just earned the achievement [Taking Inventory]
+[03:56:02] [Client thread/INFO]: [CHAT] Player229 has just earned the achievement [Taking Inventory]
+[03:57:40] [Server thread/INFO]: Saving and pausing game...
+[03:57:40] [Server thread/INFO]: Saving chunks for level 'New Worlddas'/Overworld
+[03:57:40] [Server thread/INFO]: Saving chunks for level 'New Worlddas'/Nether
+[03:57:40] [Server thread/INFO]: Saving chunks for level 'New Worlddas'/The End
+[03:57:53] [Server thread/INFO]: Saving and pausing game...
+[03:57:53] [Server thread/INFO]: Saving chunks for level 'New Worlddas'/Overworld
+[03:57:53] [Server thread/INFO]: Saving chunks for level 'New Worlddas'/Nether
+[03:57:53] [Server thread/INFO]: Saving chunks for level 'New Worlddas'/The End
+[04:01:04] [Server thread/INFO]: Saving and pausing game...
+[04:01:04] [Server thread/INFO]: Saving chunks for level 'New Worlddas'/Overworld
+[04:01:04] [Server thread/INFO]: Saving chunks for level 'New Worlddas'/Nether
+[04:01:04] [Server thread/INFO]: Saving chunks for level 'New Worlddas'/The End
+[04:01:07] [Server thread/INFO]: Stopping server
+[04:01:07] [Server thread/INFO]: Saving players
+[04:01:07] [Server thread/INFO]: Saving worlds
+[04:01:07] [Server thread/INFO]: Saving chunks for level 'New Worlddas'/Overworld
+[04:01:07] [Server thread/INFO]: Saving chunks for level 'New Worlddas'/Nether
+[04:01:07] [Server thread/INFO]: Saving chunks for level 'New Worlddas'/The End
+[04:01:08] [Client thread/INFO]: Stopping!

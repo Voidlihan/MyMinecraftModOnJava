@@ -84,6 +84,7 @@ public class BaseDiplomka {
 	public static Item handle_for_spear;
 	public static Item spearofwaterandlava;
 	public static Item spearblade;
+	public static Item entity_summoner;
 	@Instance(MODID)
 	public static BaseDiplomka instance;
 	@SidedProxy(clientSide = "com.scripterae03.diplomka.ClientProxy", serverSide = "com.scripterae03.diplomka.CommonProxy")
@@ -100,7 +101,6 @@ public class BaseDiplomka {
 		NetworkRegistry.INSTANCE.registerGuiHandler(this, new GuiHandler());
 		GameRegistry.registerWorldGenerator(cooblockgenerator, 1);
 		registerEntity(BossEntity.class, "bossEntity", 0x000009C, 0x9400D3);
-		EntityRegistry.addSpawn(BossEntity.class, 10, 1, 1, EnumCreatureType.monster, BiomeGenBase.stoneBeach, BiomeGenBase.desert, BiomeGenBase.mesa);
 		obsidian_forged_diamond_hoe = new ObsidianForgedHoe("obsidian_forged_hoe", "ObsidianForgedDiamondHoeAnimated", BaseDiplomka.Obsidian_Forged_Diamond_Mat).setUnlocalizedName("obsidian_forged_hoe").setCreativeTab(tabDiplomkaItems);
 		GameRegistry.registerItem(obsidian_forged_diamond_hoe, "obsidian_forged_hoe");
 		obsidian_forged_diamond_axe = new ObsidianForgedAxe("obsidian_forged_axe", "ObsidianForgedDiamondAxeAnimated", BaseDiplomka.Obsidian_Forged_Diamond_Mat).setUnlocalizedName("obsidian_forged_axe").setCreativeTab(tabDiplomkaItems);
@@ -125,6 +125,8 @@ public class BaseDiplomka {
 		GameRegistry.registerItem(baursak, "baursak");
 		muka = new Muka("muka", "Muka").setUnlocalizedName("muka").setCreativeTab(tabDiplomkaItems);
 		GameRegistry.registerItem(muka, "muka");
+		entity_summoner = new EntitySummoner("entity_summoner", "EntitySummoner").setUnlocalizedName("entity_summoner").setCreativeTab(tabDiplomkaItems);
+		GameRegistry.registerItem(entity_summoner, "entity_summoner");
 		milk_chocolate = new MilkChocolate("milk_chocolate", "MilkChocolate", 4, 6.0f, false).setUnlocalizedName("milk_chocolate").setCreativeTab(tabDiplomkaItems);
 		GameRegistry.registerItem(milk_chocolate, "milk_chocolate");
 		milk_chocolate_pie = new MilkChocolatePie("milk_chocolate", "MilkChocolatePie", 7, 8.0f, false).setUnlocalizedName("milk_chocolate_pie").setCreativeTab(tabDiplomkaItems);
@@ -168,6 +170,13 @@ public class BaseDiplomka {
 		third_compressed_earth_block = new ThirdCompressedEarthBlock(Material.clay, "third_compressed_earth_block", "3rdCompressedEarth").setCreativeTab(tabDiplomkaItems).setHardness(1.0f);
 		crystallized_obsidian_block = new CrystallizedObsidianBlock(Material.rock, "crystallizedobsidianblock", "CrystallizedObsidianBlock").setCreativeTab(tabDiplomkaItems).setHardness(6.0F);
 		proxy.registerRenderers();
+		GameRegistry.addShapelessRecipe(new ItemStack(entity_summoner, 1),
+				  new Object[]{
+					obsidian_forged_diamond_block,
+					Items.water_bucket,
+					Items.lava_bucket
+				  }
+				);
 		GameRegistry.addRecipe(new ItemStack(obsibench, 1),
 				  new Object[]{
 				    "COC", "OOO", "COC",
