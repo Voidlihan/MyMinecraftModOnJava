@@ -5,6 +5,7 @@ import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.Mod.Instance;
 import cpw.mods.fml.common.SidedProxy;
+import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.network.NetworkRegistry;
 import cpw.mods.fml.common.registry.EntityRegistry;
@@ -26,7 +27,9 @@ import net.minecraft.item.ItemSeedFood;
 import net.minecraft.item.ItemSeeds;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
+import net.minecraft.stats.Achievement;
 import net.minecraft.world.biome.BiomeGenBase;
+import net.minecraftforge.common.AchievementPage;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.util.EnumHelper;
 
@@ -85,6 +88,8 @@ public class BaseDiplomka {
 	public static Item spearofwaterandlava;
 	public static Item spearblade;
 	public static Item entity_summoner;
+	public static Achievement ach1;
+	public static Achievement ach2;
 	@Instance(MODID)
 	public static BaseDiplomka instance;
 	@SidedProxy(clientSide = "com.scripterae03.diplomka.ClientProxy", serverSide = "com.scripterae03.diplomka.CommonProxy")
@@ -92,6 +97,14 @@ public class BaseDiplomka {
 	@Mod.EventHandler
 	public void preInit(FMLPreInitializationEvent event) {
 		MinecraftForge.EVENT_BUS.register(new EventsForge());
+	}
+	@EventHandler
+	public void load(FMLInitializationEvent event) {
+		ach1 = new Achievement("achievement.kumysget", "kumysget", 0, 0, new ItemStack(BaseDiplomka.kumysbucket), (Achievement)null).initIndependentStat().registerStat();
+		ach2 = new Achievement("achievement.craftObsiBench", "craftObsiBench", 1, 1, BaseDiplomka.obsibench, (Achievement)null).initIndependentStat().registerStat();
+		AchievementPage.registerAchievementPage(new AchievementPage("Custom Achievements", new Achievement[] {ach1, ach2}));
+		FMLCommonHandler.instance().bus().register(new KumysAchievementEvent());
+		FMLCommonHandler.instance().bus().register(new EntitySummonerCraftEvent());
 	}
 	@EventHandler
 	public void preLoad(FMLPreInitializationEvent event)

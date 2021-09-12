@@ -20,7 +20,7 @@ public class EventsForge {
 		double x = event.entityLiving.posX;      
 		double y = event.entityLiving.posY;         
 		double z = event.entityLiving.posZ;       
-		ItemStack stack = new ItemStack(BaseDiplomka.obsidian_forged_diamond, 5);
+		ItemStack stack = new ItemStack(BaseDiplomka.obsidian_forged_diamond_block, 1);
 		ItemStack stack2 = new ItemStack(BaseDiplomka.kumysbucket, 1);
 		EntityItem item = new EntityItem(world, x, y, z, stack); 
 		EntityItem item2 = new EntityItem(world, x, y, z, stack2); 

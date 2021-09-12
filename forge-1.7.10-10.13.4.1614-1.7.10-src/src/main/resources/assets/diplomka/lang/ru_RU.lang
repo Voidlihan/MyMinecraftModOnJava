@@ -42,3 +42,7 @@ item.spearofwaterandlava.name=§5Копье Воды И Лавы
 item.handleforspear.name=Рукоять Для Копья Воды И Лавы
 item.spearblade.name=Клинок Для Копья Воды И Лавы
 item.entity_summoner.name=§5Призыватель Обсидианового Стража
+achievement.kumysget=§6Необузданная Мощь
+achievement.kumysget.desc=Получить Ведро Кумыса
+achievement.craftObsiBench=§5Что будет если я на него нажму?
+achievement.craftObsiBench.desc=Создать Призыватель Обсидианового Стража
