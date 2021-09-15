@@ -13,22 +13,14 @@ import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityList;
-import net.minecraft.entity.EnumCreatureType;
-import net.minecraft.entity.passive.EntityChicken;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.Item.ToolMaterial;
 import net.minecraft.item.ItemArmor.ArmorMaterial;
-import net.minecraft.item.ItemMonsterPlacer;
-import net.minecraft.item.ItemSeedFood;
-import net.minecraft.item.ItemSeeds;
 import net.minecraft.item.ItemStack;
-import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.stats.Achievement;
-import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraftforge.common.AchievementPage;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.util.EnumHelper;
@@ -90,6 +82,7 @@ public class BaseDiplomka {
 	public static Item entity_summoner;
 	public static Achievement ach1;
 	public static Achievement ach2;
+	public static Achievement ach3;
 	@Instance(MODID)
 	public static BaseDiplomka instance;
 	@SidedProxy(clientSide = "com.scripterae03.diplomka.ClientProxy", serverSide = "com.scripterae03.diplomka.CommonProxy")
@@ -101,10 +94,12 @@ public class BaseDiplomka {
 	@EventHandler
 	public void load(FMLInitializationEvent event) {
 		ach1 = new Achievement("achievement.kumysget", "kumysget", 0, 0, new ItemStack(BaseDiplomka.kumysbucket), (Achievement)null).initIndependentStat().registerStat();
-		ach2 = new Achievement("achievement.craftObsiBench", "craftObsiBench", 1, 1, BaseDiplomka.obsibench, (Achievement)null).initIndependentStat().registerStat();
-		AchievementPage.registerAchievementPage(new AchievementPage("Custom Achievements", new Achievement[] {ach1, ach2}));
+		ach2 = new Achievement("achievement.craftSummoner", "craftSummoner", 1, 1, BaseDiplomka.entity_summoner, (Achievement)null).initIndependentStat().registerStat();
+		ach3 = new Achievement("achievement.craftHoe", "craftHoe", 2, 2, BaseDiplomka.obsidian_forged_diamond_hoe, (Achievement)null).initIndependentStat().registerStat();
+		AchievementPage.registerAchievementPage(new AchievementPage("Custom Achievements", new Achievement[] {ach1, ach2, ach3}));
 		FMLCommonHandler.instance().bus().register(new KumysAchievementEvent());
 		FMLCommonHandler.instance().bus().register(new EntitySummonerCraftEvent());
+		FMLCommonHandler.instance().bus().register(new HoeCraftEvent());
 	}
 	@EventHandler
 	public void preLoad(FMLPreInitializationEvent event)
@@ -364,21 +359,11 @@ public class BaseDiplomka {
 				    ('A'), new ItemStack(Items.dye, 1, 8),
 				  }
 				);
-		//GameRegistry.addRecipe(ChickenEgg, new Object[] { "SSS", "SGS", "SSS",
-		//	    ('S'), obsidian_forged_diamond, ('G'), Items.egg});
 	}
-	//public static void applyEntityIdToItemStack(ItemStack stack, String entityId) {
-	//	NBTTagCompound nbttagcompound = stack.hasTagCompound() ? stack.getTagCompound() : new NBTTagCompound();
-	//	NBTTagCompound nbttagcompound1 = new NBTTagCompound();
-	//	nbttagcompound1.setString("id", entityId);
-	//	nbttagcompound.setTag("EntityTag", nbttagcompound1);
-	//	stack.setTagCompound(nbttagcompound);
-	//}
 	public static void registerEntity(Class entityClass, String name, int primaryColor, int secondaryColor)
 	{
 	  int entityID = EntityRegistry.findGlobalUniqueEntityId();
 	  long seed = name.hashCode();
-
 	  EntityRegistry.registerGlobalEntityID(entityClass, name, entityID);
 	  EntityRegistry.registerModEntity(entityClass, name, entityID, instance, 64, 1, true);
 	  EntityList.entityEggs.put(Integer.valueOf(entityID), new EntityList.EntityEggInfo(entityID, primaryColor, secondaryColor));

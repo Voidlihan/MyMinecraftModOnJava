@@ -17,7 +17,7 @@ buildscript {
 
 apply plugin: 'forge'
 
-version = "beta_2.0"
+version = "release_1.0"
 group= "com.scripterae03.diplomka" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = "Diplomka Mod"
 

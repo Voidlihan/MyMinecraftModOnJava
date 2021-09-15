@@ -16,14 +16,11 @@ Found AccessTransformer in main resources: a_at.cfg
 :getVersionJson
 :extractUserDev UP-TO-DATE
 :mergeJars SKIPPED
-:applyBinPatches
+:applyBinPatches SKIPPED
 :downloadMcpTools SKIPPED
 :extractMcpData UP-TO-DATE
 :genSrgs SKIPPED
-:deobfBinJar
-Applying SpecialSource...
-Applying Exceptor...
-Stripping synthetics...
+:deobfBinJar UP-TO-DATE
 :compileApiJava UP-TO-DATE
 :processApiResources UP-TO-DATE
 :apiClasses UP-TO-DATE
@@ -50,4 +47,4 @@ Note: Recompile with -Xlint:unchecked for details.
 
 BUILD SUCCESSFUL
 
-Total time: 34.874 secs
+Total time: 21.18 secs
