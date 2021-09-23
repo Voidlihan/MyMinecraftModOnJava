@@ -11,80 +11,27 @@ import net.minecraft.world.gen.feature.WorldGenMinable;
 
 public class COOBlockGenerator implements IWorldGenerator{
 	@Override
-	public void generate(Random rand, int chunkX, int chunkZ, World world, IChunkProvider chunkGenerator, IChunkProvider chunkProvider) {
-
-	    generateOverworld(rand, chunkX, chunkZ, world);
-	    generateNether(rand, chunkX, chunkZ, world);
-	    generateEnd(rand, chunkX, chunkZ, world);
-
+	public void generate(Random random, int chunkX, int chunkZ, World world, IChunkProvider chunkGenerator, IChunkProvider chunkProvider) {
+		switch(world.provider.dimensionId) {
+		case 0 :
+			//Generate our surface world
+			generateSurface(world, random, chunkX*16, chunkZ*16);
+		}
+		
 	}
 
-	private void generateOverworld(Random rand, int chunkX, int chunkZ, World world) {
-
-	  generateOverworld(world, rand, chunkX * 16, chunkZ * 16);
-
+	private void generateSurface(World world, Random random, int x, int z) {
+		//this.addOreSpawn(Nealecraft.oreWhatever, world, random, i=blockXPos, j= blockZPos, maxX, maxZ, maxVeinSize, chancetospawn, minY, maxY); 
+		this.addOreSpawn(BaseDiplomka.crystallobsidianore, world, random, x, z, 16, 16, 4+random.nextInt(6), 25, 38, 100);
+		
 	}
 
-	private void generateNether(Random rand, int chunkX, int chunkZ, World world) {
-
-	  generateNether(world, rand, chunkX * 16, chunkZ * 16);
-
-	}
-
-	private void generateEnd(Random rand, int chunkX, int chunkZ, World world) {
-
-	  generateEnd(world, rand, chunkX * 16, chunkZ * 16);
-
-	}
-
-	public void generateOverworld(World world, Random rand, int blockXPos, int blockZPos) {
-
-	  addOreSpawn(BaseDiplomka.crystallobsidianore, Blocks.stone, world, rand, blockXPos, blockZPos, 16, 16, 1, 2, 1, 1, 10, 5, 6);
-
-	}
-
-	public void generateNether(World world, Random rand, int blockXPos, int blockZPos) {
-
-	  addOreSpawn(BaseDiplomka.crystallobsidianore, Blocks.netherrack, world, rand, blockXPos, blockZPos, 16, 16, 1, 2, 1, 1, 10, 5, 6);
-
-	}
-
-	public void generateEnd(World world, Random rand, int blockXPos, int blockZPos) {
-
-	  addOreSpawn(BaseDiplomka.crystallobsidianore, Blocks.end_stone, world, rand, blockXPos, blockZPos, 16, 16, 1, 2, 1, 1, 10, 5, 6);
-
-	}
-
-	/**
-	  * Добавляет генерацию руды в Minecraft. Просто воспользуйтесь этим методом для регистрации генерируемых руд.
-
-	  * @param block              Блок, который хотите генерировать
-	  * @param block replace      Блок, рядом с которым хотите генерировать
-	  * @param world              Мир (не измерение), в котором этот блок должен генерироваться
-	  * @param random             Случайное число для получения координат генерации блока
-	  * @param blockXPos          Число для того, чтобы было пустое место по координатам X для метода генерации (использует кварцевая руда)
-	  * @param blockZPos          Число для того, чтобы было пустое место по координатам Z для метода генерации (использует кварцевая руда)
-	  * @param maxX               Число, которое настроит максимальную X координату для генерации руды на оси X на чанк
-	  * @param maxZ               Число, которое настроит максимальную Z координату для генерации руды на оси Z на чанк
-	  * @param minVeinSize        Минимальное число блоков руды в одной жиле
-	  * @param maxVeinSize        Максимальное число блоков руды в одной жиле
-	  * @param minVeinsPerChunk   Минимальное число жил в чанке
-	  * @param maxVeinsPerChunk   Максимальное число жил в чанке
-	  * @param chancesToSpawn     Шанс генерации блоков на чанк в процентах
-	  * @param minY               Минимальная координата Y на которой руда может сгенерироваться
-	  * @param maxY               Максимальная координата Y на которой руда может сгенерироваться
-	**/
-
-	public static void addOreSpawn(Block ore, Block replace, World world, Random rand, int blockXPos, int blockZPos, int maxX, int maxZ,
-	int minVeinSize, int maxVeinSize, int minVeinsPerChunk, int maxVeinsPerChunk, int chanceToSpawn, int minY, int maxY) {
-	  if (rand.nextInt(101) < (100 - chanceToSpawn)) return;
-	  int veins = rand.nextInt(maxVeinsPerChunk - minVeinsPerChunk + 1) + minVeinsPerChunk;
-	  for (int i = 0; i < veins; i++) {
-	    int posX = blockXPos + rand.nextInt(maxX);
-	    int posY = minY + rand.nextInt(maxY - minY);
-	    int posZ = blockZPos + rand.nextInt(maxZ);
-	    (new WorldGenMinable(ore, minVeinSize + rand.nextInt(maxVeinSize - minVeinSize + 1),
-	      replace)).generate(world, rand, posX, posY, posZ);
-	  }
+	private void addOreSpawn(Block block, World world, Random random, int blockXPos, int blockZPos, int maxX, int maxZ, int maxVeinSize, int chanceToSpawn, int minY, int maxY) {
+		for(int i = 0; i < chanceToSpawn; i++) {
+			int posX = blockXPos + random.nextInt(maxX);
+			int posY = minY + random.nextInt(maxY - minY);
+			int posZ = blockZPos + random.nextInt(maxZ);
+			(new WorldGenMinable(block, maxVeinSize)).generate(world, random, posX, posY, posZ);
+		}
 	}
 }

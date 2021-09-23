@@ -11,6 +11,8 @@ import cpw.mods.fml.common.network.NetworkRegistry;
 import cpw.mods.fml.common.registry.EntityRegistry;
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.block.Block;
+import net.minecraft.block.BlockOre;
+import net.minecraft.block.BlockRedstoneOre;
 import net.minecraft.block.material.Material;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.EntityList;
@@ -50,7 +52,7 @@ public class BaseDiplomka {
 	public static Block second_compressed_earth_block;
 	public static Block third_compressed_earth_block;
 	public static Block crystallized_obsidian_block;
-	public static Block crystallobsidianore;
+	public static BlockOre crystallobsidianore;
 	public static Block obsibench;
 	public static COOBlockGenerator cooblockgenerator = new COOBlockGenerator();
 	public static Item big_bread;
@@ -107,7 +109,7 @@ public class BaseDiplomka {
 		RecipeRemover.removeCraftingRecipe();
 		FMLCommonHandler.instance().bus().register(new CraftingHandler());
 		NetworkRegistry.INSTANCE.registerGuiHandler(this, new GuiHandler());
-		GameRegistry.registerWorldGenerator(cooblockgenerator, 1);
+		GameRegistry.registerWorldGenerator(cooblockgenerator, 0);
 		registerEntity(BossEntity.class, "bossEntity", 0x000009C, 0x9400D3);
 		obsidian_forged_diamond_hoe = new ObsidianForgedHoe("obsidian_forged_hoe", "ObsidianForgedDiamondHoeAnimated", BaseDiplomka.Obsidian_Forged_Diamond_Mat).setUnlocalizedName("obsidian_forged_hoe").setCreativeTab(tabDiplomkaItems);
 		GameRegistry.registerItem(obsidian_forged_diamond_hoe, "obsidian_forged_hoe");
@@ -164,7 +166,7 @@ public class BaseDiplomka {
 		GameRegistry.registerItem(obsidian_forged_diamond_pants, "obsidian_forged_diamond_pants");
 		GameRegistry.registerItem(obsidian_forged_diamond_boots, "obsidian_forged_diamond_boots");
 		blockwood = new BlockHere(Material.wood, "blockwood", "Wood").setCreativeTab(tabDiplomkaItems).setHardness(2.0F);
-		crystallobsidianore = new CrystallObsidianOre(Material.rock, "crystallobsidianore", "CrystallizedOOre").setCreativeTab(tabDiplomkaItems).setHardness(6.0F);
+		crystallobsidianore = (BlockOre) new CrystallObsidianOre("crystallobsidianore", "CrystallizedOOre").setCreativeTab(tabDiplomkaItems).setHardness(6.0F);
 		obsibench = new ObsiBench(Material.rock, "obsidianworkbench").setCreativeTab(tabDiplomkaItems).setHardness(8.0F);
 		obsidian_forged_diamond_block = new ObsidianForgedDiamondBlock(Material.rock, "obsidian_forged_diamond_block", "ObsidianForgedDiamondBlock").setCreativeTab(tabDiplomkaItems).setHardness(8.0F);
 		obsidian_forged_diamond_bright_block = new ObsidianForgedDiamondBrightBlock(Material.rock, "obsidian_forged_diamond_bright_block", "ObsidianForgedDiamondBlockAnimated").setCreativeTab(tabDiplomkaItems).setHardness(8.0F);
