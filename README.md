@@ -1,6 +1,11 @@
-This is open source code of My personal Minecraft modification created with Forge API.\n
+<title>My Personal Minecraft Mod (1.7.10 forge)</title>
+
+This is open source code of My personal Minecraft modification created with Forge API.
+
 Writen by Java.
+
 This mod adds a lot of fancy and experimental mechanics, items, blocks and few achievements.
+
 Also, I was localizated this mod for russian and english languages.
 
 Demo:
