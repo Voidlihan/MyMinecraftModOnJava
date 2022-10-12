@@ -1,4 +1,4 @@
-<title>My Personal Minecraft Mod (1.7.10 forge)</title>
+##My Personal Minecraft Mod (1.7.10 forge)
 
 This is open source code of My personal Minecraft modification created with Forge API.
 
