@@ -2,7 +2,7 @@
 
 > This is open source code of My personal Minecraft modification created with [Forge API](https://files.minecraftforge.net/net/minecraftforge/forge/index_1.7.10.html).
 
-> Writen by Java.
+> Writen by Java(JDK) and compiled by Gradle.
 
 > This mod adds a lot of fancy and experimental mechanics, items, blocks and few achievements.
 
